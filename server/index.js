@@ -20,7 +20,7 @@ app.use((err, req, res, next) => {
     });
   }
 });
-server.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
   console.log('[http] Server listening on port', process.env.PORT);
 });
