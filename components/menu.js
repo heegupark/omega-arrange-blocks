@@ -136,7 +136,7 @@ export default function Menu(props) {
           </div>
           <div>
             <Button
-              onClick={() => props.start(1)}
+              onClick={() => props.startOver()}
               className={classes.rankingButton}
               variant="outlined" color="secondary">
               Start Over
@@ -151,7 +151,7 @@ export default function Menu(props) {
           <div className={classes.title}>GAME OVER!</div>
           <div className={classes.menuButtonBox}>
             <Button
-              onClick={() => props.start(1)}
+              onClick={() => props.startOver()}
               className={clsx(classes.startButton)}
               variant="outlined" color="secondary">
               Start Over
