@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Stack from './stack';
-import Score from './score';
-import Menu from './menu';
-import MainMenu from './main-menu';
-import PlayAgain from './play-again';
-import Footer from './footer';
-import IndexPage from './index-page'
+import Stack from '../components/stack';
+import Score from '../components/score';
+import Menu from '../components/menu';
+import MainMenu from '../components/main-menu';
+import PlayAgain from '../components/play-again';
+import Footer from '../components/footer';
+import IndexPage from '../components/index-page'
 
 const levelData = {
   1: ['number', 3, 3],
