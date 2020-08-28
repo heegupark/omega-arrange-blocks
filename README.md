@@ -26,4 +26,4 @@
 ## Screen shot
 [Desktop]
 
-![Omega Ride](https://github.com/heegupark/omega-ride/blob/master/block-ss-001.gif)
+![Omega Ride](https://github.com/heegupark/omega-arrange-blocks/blob/master/block-ss-001.gif)
