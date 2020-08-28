@@ -107,6 +107,7 @@ export default function Stack(props) {
   return (
     <div
       ref={containerRef}
+      style={{ paddingTop: `${20 - itemsCount * 2}%` }}
       className="container">
       {props.items.map((item, index) => {
         result[index] = item
