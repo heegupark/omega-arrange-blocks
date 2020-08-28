@@ -25,7 +25,7 @@ export default function Stack(props) {
   const containerRef = React.createRef()
   const height = 50;
   const heightWithMargin = 55;
-  const result = {}
+  let result = {}
 
   const itemsCount = props.items.length || 0;
   useEffect(() => setOrder(range(itemsCount)), [itemsCount])
@@ -67,11 +67,12 @@ export default function Stack(props) {
   }, [isPressed]);
 
   const checkWin = (result) => {
-    const value = Object.values(result)
+    const valueSet = new Set(Object.values(result))
+    const value = [...valueSet]
     let firstIdx = 0
     let secondIdx = 1
-    while(firstIdx < value.length && secondIdx < value.length) {
-      if (value[firstIdx] > value[secondIdx]) return false
+    while (firstIdx < value.length && secondIdx < value.length) {
+      if (value[firstIdx] >= value[secondIdx]) return false
       firstIdx++
       secondIdx++
     }
@@ -83,14 +84,13 @@ export default function Stack(props) {
     setTopDeltaY(0)
     if (event.target.id && event.target.id !== '__next') {
       for (let i of event.target.parentNode.children) {
-        result[Math.abs(Math.round(Number(i.style.transform.split('px,')[1]) / heightWithMargin))] = Number(i.id)
+        let key = Math.abs(Math.round(Number(i.style.transform.split('px,')[1]) / heightWithMargin))
+        result[key] = Number(i.id)
       }
       if (checkWin(result)) {
+        result = {}
         props.setScore(props.score + 10)
-        setTimeout(() => {
-          props.generateItems('number', 5, 5)
-        }, 1000)
-        props.generateItems('number', 1, 1)
+        props.openWinModal(true)
       }
     }
 
@@ -141,7 +141,8 @@ export default function Stack(props) {
             }
           </Motion>
         );
-      })}
+      })
+    }
     </div>
   );
 }
