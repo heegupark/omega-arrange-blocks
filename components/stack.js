@@ -84,6 +84,7 @@ export default function Stack(props) {
     setTopDeltaY(0)
     if (event.target.id && event.target.id !== '__next') {
       for (let i of event.target.parentNode.children) {
+        console.log(i)
         let key = Math.abs(Math.round(Number(i.style.transform.split('px,')[1]) / heightWithMargin))
         result[key] = Number(i.id)
       }
@@ -109,7 +110,7 @@ export default function Stack(props) {
       ref={containerRef}
       style={{ marginTop: `${40 - itemsCount * 4}%` }}
       className="container">
-      {props.items.map((item, index) => {
+      {props.items.length > 2 && props.items.map((item, index) => {
         result[index] = item
         const style = originalPosOfLastPressed === index && isPressed
           ? {

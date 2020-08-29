@@ -75,7 +75,7 @@ body {
 .top-menu-box {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  /* width: 400px; */
   margin: auto;
 }
 
@@ -107,6 +107,19 @@ body {
 }
 
 
+@media screen and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 @media (max-width: 1199.98px) {
 
 }
@@ -132,16 +145,11 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  .top-menu-box {
-    width: 100%;
-  }
+
 }
 
 @media (max-height: 375px) {
-  html,
-  body {
-    overflow: visible;
-  }
+
 }
 
 @media (max-width: 320px) {
