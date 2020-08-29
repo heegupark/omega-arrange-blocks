@@ -98,6 +98,9 @@ body {
 }
 
 .omega-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   text-align: center;
   color: #c6a1dd;
   font-size: 12px;
