@@ -106,20 +106,6 @@ body {
   font-size: 12px;
 }
 
-
-@media screen and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
-
 @media (max-width: 1199.98px) {
 
 }
