@@ -22,10 +22,12 @@ export default function Stack(props) {
   const [isPressed, setIsPressed] = useState(false);
   const [originalPosOfLastPressed, setOriginalPosOfLastPressed] = useState(0);
   const [order, setOrder] = useState(0);
+  const [screenHeight, setScreenHeight] = useState(900)
   const containerRef = React.createRef()
-  const height = 50;
-  const heightWithMargin = 55;
+  let height = screenHeight > 700 ? 50 : 40
+  const heightWithMargin = height + 5;
   let result = {}
+  useEffect(() => setScreenHeight(window.screen.height), [screenHeight])
 
   const itemsCount = props.items.length || 0;
   useEffect(() => setOrder(range(itemsCount)), [itemsCount])
@@ -80,22 +82,21 @@ export default function Stack(props) {
   }
 
   const handleMouseUp = () => {
+    result = {}
     setIsPressed(false)
     setTopDeltaY(0)
     if (event.target.id && event.target.id !== '__next') {
       for (let i of event.target.parentNode.children) {
-        console.log(i)
         let key = Math.abs(Math.round(Number(i.style.transform.split('px,')[1]) / heightWithMargin))
         result[key] = Number(i.id)
       }
       if (checkWin(result)) {
-        result = {}
         props.setScore(props.score + 10)
         props.openWinModal(true)
       }
     }
-
   };
+
   useEffect(() => {
     window.addEventListener('mouseup', handleMouseUp);
     window.addEventListener('touchend', handleMouseUp);
@@ -108,7 +109,7 @@ export default function Stack(props) {
   return (
     <div
       ref={containerRef}
-      style={{ marginTop: `${40 - itemsCount * 4}%` }}
+      style={{ marginTop: screenHeight > 400 ? `${30 - itemsCount * 3}%` : 0 }}
       className="container">
       {props.items.length > 2 && props.items.map((item, index) => {
         result[index] = item

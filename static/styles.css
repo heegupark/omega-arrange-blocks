@@ -22,7 +22,7 @@ body {
   width: 320px;
   height: 80vh;
   margin: auto;
-  margin-top: 4%;
+  /* margin-top: 4%; */
 }
 
 .container > div {
