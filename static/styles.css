@@ -16,13 +16,11 @@ body {
   background: black;
 }
 
-
 .container {
   position: relative;
   width: 320px;
   height: 80vh;
   margin: auto;
-  /* margin-top: 4%; */
 }
 
 .container > div {
@@ -75,7 +73,6 @@ body {
 .top-menu-box {
   display: flex;
   justify-content: space-between;
-  /* width: 400px; */
   margin: auto;
 }
 

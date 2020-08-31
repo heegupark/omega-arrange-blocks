@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[2],
     padding: theme.spacing(2, 4, 3),
     textAlign: 'center',
-    width: '320px',
-    height: '320px',
+    width: '300px',
+    height: '300px',
     borderRadius: '3px',
-    fontSize: '12px',
+    fontSize: '11px',
     '&:focus': {
       border: '1px solid gold',
       outline: 0
