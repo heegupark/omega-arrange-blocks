@@ -163,7 +163,7 @@ export default function Menu(props) {
     default:
       element = (
         <div className={classes.paper}>
-          <div className={classes.title}>SORT BLOCKS IN ASCENDING ORDER</div>
+          <div className={classes.title}>MOVE BLOCKS TO SORT THEM IN ASCENDING ORDER</div>
           <div className={classes.buttonBox}>
             <Button
               onClick={() => props.start()}
