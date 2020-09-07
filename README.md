@@ -14,7 +14,7 @@
 2. User can sort the block to play next level.
 
 ## Lessons Learned
-1. Experience Next.js for server side rendering and its structure
+1. Experienced Next.js for server side rendering and its structure
 2. Experienced to deal with various functions of React Hooks
 3. Experienced to effectively use Material UI to display data
 4. React and JavaScript Object Oriented Programming for better functionalities and to increase the re-usage of codes
