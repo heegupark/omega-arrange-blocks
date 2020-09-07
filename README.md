@@ -18,7 +18,7 @@
 2. Experienced to deal with various functions of React Hooks
 3. Experienced to effectively use Material UI to display data
 4. React and JavaScript Object Oriented Programming for better functionalities and to increase the re-usage of codes
-6. Experienced to deploy the application built up on top of Next.js into AWS EC2
+5. Experienced to deploy the application built up on top of Next.js into AWS EC2
 
 ## Live Site
 * You can see and test the live version here: <a href="https://block.heegu.net" target="blank">block.heegu.net</a>
